@@ -16,6 +16,7 @@ pip install -r requirements.txt
 ```bash
 python cli.py images/sample.png --width 180 --height 130 --algo dp --output out/dp.png
 pytest
+streamlit run app.py   # interactive app, opens http://localhost:8501
 ```
 
 `--algo` is one of `dummy`, `dp`, `greedy`, `graphcut`. `dummy` is a placeholder
@@ -34,7 +35,7 @@ Use `images/small.png` (50 x 40) for graph cut.
 | `seam_carving/greedy.py` | P4 | greedy seam finder |
 | `seam_carving/graphcut.py` | P5 | graph cut seam finder |
 | `seam_carving/visualize.py` | P6 | seam overlay, all-seams image, step-by-step GIF |
-| `app.py` | P6 | interactive app (to add) |
+| `app.py` | P6 | interactive Streamlit app (resize, step-by-step view, compare) |
 | `benchmarks/run_bench.py` | P3 | timing and comparison (to add) |
 | `cli.py` | P1 | command-line entry point |
 | `tests/` | everyone | `test_<your part>.py` |
